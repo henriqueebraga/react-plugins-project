@@ -1,0 +1,13 @@
+@use '@/styles/variables' as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: $blue;
+    font-size: 32px;
+    height: 100px;
+    padding: 0 10px 0 20px;
+    &__bold {
+        font-weight: 600;
+    }
+}

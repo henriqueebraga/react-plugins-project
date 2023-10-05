@@ -1,0 +1,68 @@
+@use '@/styles/variables' as *;
+
+.plugins_container {
+    display: block;
+    height: 100%;
+
+    @media (min-width: $min-screen-xxs) {
+        display: flex;
+    }
+
+    &__navi {
+        position: relative;
+        width: 100%;
+        background-color: $grey;
+        flex: 0 0 auto;
+        @media (min-width: $min-screen-xxs) {
+            width: 260px;
+        }
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        padding: 0px 15px 15px 30px;
+    }
+}
+
+.loader_spinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid $grey;
+        border-top-color: $black;
+        animation: loader_spinner 0.8s infinite linear;
+    }
+}
+
+@keyframes loader_spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.errors {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    color: $black;
+    padding-left: 15px;
+    background-color: $opacity-red;
+    font-weight: 600;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $red;
+    }
+}

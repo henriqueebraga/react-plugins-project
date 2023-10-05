@@ -1,0 +1,71 @@
+.toggle__switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: $red;
+    border-radius: 12.5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &__text {
+        font-size: 11px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 27px;
+        color: $red;
+        font-weight: 600;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 2.5px;
+        left: 2.5px;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    &.toggle__switch_active {
+        background-color: $green;
+        .toggle__switch__text {
+            color: $green;
+        }
+        &:before {
+            left: 27.5px;
+        }
+    }
+    &.toggle__switch_disabled {
+        cursor: text;
+    }
+}
+
+.alt_toggle_switch {
+    position: relative;
+    width: 50px;
+    height: 32px;
+    background-color: $red;
+    border-radius: 19.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 3.5px;
+        left: 4.5px;
+        width: 24px;
+        height: 24px;
+        background-color: $white;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+    &.alt_toggle_switch_active {
+        background-color: $green;
+        &:before {
+            left: 23.5px;
+        }
+    }
+}
