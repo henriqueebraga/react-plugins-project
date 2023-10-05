@@ -1,1 +1,1 @@
-# gd_plugins
+# plugins

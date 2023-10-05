@@ -1,5 +1,5 @@
 {
-	"name": "gd_plugins_frontend",
+	"name": "react_plugins_frontend",
 	"scripts": {
 		"start": "vite",
 		"build": "tsc && vite build",
